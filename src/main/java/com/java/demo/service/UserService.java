@@ -1,14 +1,18 @@
-package com.example.demo.service;
+package com.java.demo.service;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.example.demo.model.UserDetails;
-import com.example.demo.repository.UserRepository;
+import com.java.demo.modal.UserDetails;
+import com.java.demo.repository.UserRepository;
 
 @Service
 public class UserService {
-    
+	
+	@Autowired
 	private UserRepository userRepository;
+	
+	
 	public UserService (UserRepository userRepository)
 	{
 		this.userRepository=userRepository;
